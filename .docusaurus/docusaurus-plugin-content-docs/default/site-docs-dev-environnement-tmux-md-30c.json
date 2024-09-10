@@ -1,0 +1,23 @@
+{
+  "id": "dev-environnement/tmux",
+  "title": "TMUX",
+  "description": "All about why you should use tmux and how beautiful it is and it gets.",
+  "source": "@site/docs/dev-environnement/tmux.md",
+  "sourceDirName": "dev-environnement",
+  "slug": "/dev-environnement/tmux",
+  "permalink": "/docs/dev-environnement/tmux",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Make",
+    "permalink": "/docs/dev-environnement/make"
+  },
+  "next": {
+    "title": "Learning languages",
+    "permalink": "/docs/category/learning-languages"
+  }
+}

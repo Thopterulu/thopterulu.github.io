@@ -1,0 +1,98 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "building-websites/Docusaurus",
+              "path": "/docs/building-websites/Docusaurus",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "building-websites/serving-websites",
+              "path": "/docs/building-websites/serving-websites",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "dev-environnement/linux-unix",
+              "path": "/docs/dev-environnement/linux-unix",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "dev-environnement/make",
+              "path": "/docs/dev-environnement/make",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "dev-environnement/tmux",
+              "path": "/docs/dev-environnement/tmux",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "learning-languages/Assembly",
+              "path": "/docs/learning-languages/Assembly",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "learning-languages/C",
+              "path": "/docs/learning-languages/C",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "learning-languages/python",
+              "path": "/docs/learning-languages/python",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "learning-languages/rust",
+              "path": "/docs/learning-languages/rust",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "learning-languages/zig",
+              "path": "/docs/learning-languages/zig",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/dev-environnement",
+              "path": "/docs/category/dev-environnement",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/learning-languages",
+              "path": "/docs/category/learning-languages",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/building-websites",
+              "path": "/docs/category/building-websites",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

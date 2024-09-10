@@ -1,0 +1,23 @@
+{
+  "id": "learning-languages/python",
+  "title": "Python",
+  "description": "",
+  "source": "@site/docs/learning-languages/python.md",
+  "sourceDirName": "learning-languages",
+  "slug": "/learning-languages/python",
+  "permalink": "/docs/learning-languages/python",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "C",
+    "permalink": "/docs/learning-languages/C"
+  },
+  "next": {
+    "title": "Rust",
+    "permalink": "/docs/learning-languages/rust"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "learning-languages/C",
+  "title": "C",
+  "description": "Trying to learn the based lang",
+  "source": "@site/docs/learning-languages/C.md",
+  "sourceDirName": "learning-languages",
+  "slug": "/learning-languages/C",
+  "permalink": "/docs/learning-languages/C",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Assembly",
+    "permalink": "/docs/learning-languages/Assembly"
+  },
+  "next": {
+    "title": "Python",
+    "permalink": "/docs/learning-languages/python"
+  }
+}
