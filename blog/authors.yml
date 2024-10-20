@@ -21,3 +21,13 @@ slorber:
     linkedin: sebastienlorber
     github: slorber
     newsletter: https://thisweekinreact.com
+
+Thopterulu:
+  name: Guillaume
+  title: This is me :D
+  url: https://thopterulu.github.io/
+  image_url: https://avatars.githubusercontent.com/u/43354666?v=4
+  page: true
+  socials:
+    linkedin: guillaumekgrs
+    github: Thopterulu
