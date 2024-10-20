@@ -11,7 +11,6 @@ const config = {
   title: 'Yet another book of knowledge',
   tagline: 'Dinosaurs are cool, they helped build this thing :)',
   favicon: 'img/favicon.ico',
-  output: 'build/',
 
   // Set the production url of your site here
   url: 'https://thopterulu.github.io',
