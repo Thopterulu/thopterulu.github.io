@@ -1,28 +1,30 @@
-name: Update README with API Data
+name: Update build website on push
 
 on:
-  schedule:
-    - cron: '0 0 * * 0'  # Exécution chaque semaine (dimanche à minuit)
-  workflow_dispatch:  # Permet de déclencher manuellement
+  push:
+    branches:
+      - main  # Exécute ce workflow lorsque tu pushes sur la branche main (modifiable)
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4.2.1
+    - name: Checkout code
+      uses: actions/checkout@v4.2.1
 
-    - name: Install npm
-      run: sudo apt-get install npm
-    
+    - name: Set up Node.js environment
+      uses: actions/setup-node@v4.0.4
+
+    - name: Install dependencies
+      run: npm install  # Change la commande si tu utilises yarn ou un autre package manager
+      
     - name: Building website
       run: |
-        npm run build ..
+        npm run build build/
 
-    - name: Commit changes
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add *
-        git commit -m "Mise à jour du build du site"
-        git push
+    - name: Deploy to GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v4.0.0
+      with:
+        commit_message: Building website automated by github actions
+        build_dir: build  # Dossier à publier sur GitHub Pages
