@@ -28,3 +28,5 @@ jobs:
       with:
         commit_message: Building website automated by github actions
         build_dir: build  # Dossier à publier sur GitHub Pages
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
