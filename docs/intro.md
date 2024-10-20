@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Intro
 
-Hey hey people, Thopterulu here.
+Hey hey people, Thopterulu here. :D
 
 ## The goal is to share / remember / Learn about stuff
 
