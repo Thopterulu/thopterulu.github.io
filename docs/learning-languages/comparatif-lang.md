@@ -140,58 +140,10 @@ humain = Humain.new("Alice", 30)
 humain.se_presenter
 ```
 
----
-
-### 6. **Swift**
-
-Swift est principalement utilisé pour le développement d'applications iOS et macOS. Il est orienté objet et combine des éléments de programmation fonctionnelle.
-
-```swift
-class Humain {
-    var nom: String
-    var age: Int
-
-    init(nom: String, age: Int) {
-        self.nom = nom
-        self.age = age
-    }
-
-    func sePresenter() {
-        print("Je m'appelle \(nom) et j'ai \(age) ans.")
-    }
-}
-
-// Utilisation
-let humain = Humain(nom: "Alice", age: 30)
-humain.sePresenter()
-```
 
 ---
 
-### 7. **JavaScript (avec ES6 Classes)**
-
-JavaScript est essentiel pour le développement Web, et avec ES6, il prend en charge une syntaxe orientée objet via les classes.
-
-```javascript
-class Humain {
-    constructor(nom, age) {
-        this.nom = nom;
-        this.age = age;
-    }
-
-    sePresenter() {
-        console.log(`Je m'appelle ${this.nom} et j'ai ${this.age} ans.`);
-    }
-}
-
-// Utilisation
-const humain = new Humain("Alice", 30);
-humain.sePresenter();
-```
-
----
-
-### 8. **TypeScript**
+### 6. **TypeScript**
 
 TypeScript est un sur-ensemble de JavaScript qui ajoute des types, idéal pour des projets de grande envergure. Il est orienté objet, avec une syntaxe proche de celle de JavaScript.
 
@@ -217,229 +169,67 @@ humain.sePresenter();
 
 ---
 
-### 9. **PHP**
 
-PHP est largement utilisé pour le développement Web côté serveur et supporte la programmation orientée objet depuis la version 5.
 
-```php
-<?php
-class Humain {
-    public $nom;
-    public $age;
 
-    public function __construct($nom, $age) {
-        $this->nom = $nom;
-        $this->age = $age;
-    }
+## je continue avec le LLM
 
-    public function sePresenter() {
-        echo "Je m'appelle {$this->nom} et j'ai {$this->age} ans.\n";
-    }
-}
-
-// Utilisation
-$humain = new Humain("Alice", 30);
-$humain->sePresenter();
-?>
-```
 
 ---
 
-### 10. **Dart**
+### 1. **Go**
 
-Dart est souvent utilisé pour le développement d’applications mobiles avec Flutter. Il est orienté objet et intègre des concepts modernes.
+- **Pourquoi c'est intéressant** : Go est connu pour sa simplicité et sa courbe d’apprentissage douce. Il est conçu pour les **systèmes distribués** et le développement web, avec des **goroutines** pour la gestion de la concurrence, une collecte des ordures (garbage collection) intégrée, et une syntaxe claire.
+- **Utilité générale** : Go est déjà adopté en production dans de nombreux secteurs (notamment chez Google, Dropbox, etc.) pour le développement de microservices, de services API et de systèmes distribués. Sa popularité vient de son efficacité dans les applications réseau et la simplicité avec laquelle il gère la concurrence.
+- **Apprentissage et application** : Go convient parfaitement si tu recherches une introduction pratique à la programmation système et concurrente, avec des débouchés dans le développement web, le cloud, et les applications réseau.
 
-```dart
-class Humain {
-    String nom;
-    int age;
-
-    Humain(this.nom, this.age);
-
-    void sePresenter() {
-        print("Je m'appelle $nom et j'ai $age ans.");
-    }
-}
-
-// Utilisation
-void main() {
-    var humain = Humain("Alice", 30);
-    humain.sePresenter();
-}
-```
+**En résumé** : Go est un excellent choix pour des projets rapides en production, où la simplicité et la rapidité d'exécution sont prioritaires.
 
 ---
 
+### 2. **Rust**
 
-## je ne trouve pas de lang cool alors je continue avec le LLM
+- **Pourquoi c'est intéressant** : Rust est conçu pour des performances et une sécurité mémoire maximales, sans garbage collection, avec un **système de types avancé** et un système de **propriété et d’emprunt** (ownership/borrowing) pour éviter les fuites de mémoire et les erreurs de concurrence.
+- **Utilité générale** : Rust excelle dans les applications système, les logiciels embarqués, les jeux, et même les applications de haute performance sur le web. Il est souvent cité comme une alternative plus sécurisée et moderne à C et C++.
+- **Apprentissage et application** : Rust est plus difficile à maîtriser que Go mais procure des compétences en gestion mémoire fine et en développement système. Si tu cherches une maîtrise accrue de la gestion mémoire avec des applications pratiques dans la sécurité et la performance, Rust est une option puissante et polyvalente.
 
-Pour une expérience vraiment rafraîchissante, voici quelques langages aux syntaxes uniques et concepts originaux qui pourraient te plaire si tu veux t'éloigner de la simplicité de Python :
-
----
-
-### 1. **Elixir**
-   - **Style** : Fonctionnel et concurrent.
-   - **Particularité** : Inspiré d'Erlang, Elixir se distingue par une syntaxe proche de Ruby et une gestion native de la concurrence. Il est idéal pour des applications hautement concurrentes.
-   - **Pourquoi c’est intéressant** : L'approche modulaire et les paradigmes fonctionnels, avec des **processus légers**, offrent une expérience de programmation très fluide et idiomatique, surtout pour la gestion de serveurs et services Web.
-
-   ```elixir
-   defmodule Humain do
-       defstruct nom: "", age: 0
-
-       def se_presenter(%Humain{nom: nom, age: age}) do
-           IO.puts("Je m'appelle #{nom} et j'ai #{age} ans.")
-       end
-   end
-   ```
+**En résumé** : Rust est le meilleur choix pour des projets qui nécessitent à la fois sécurité, performance, et contrôle mémoire, avec des concepts de bas niveau plus avancés.
 
 ---
 
-### 2. **Haskell**
-   - **Style** : Fonctionnel pur.
-   - **Particularité** : Haskell se distingue par une syntaxe minimaliste et purement fonctionnelle, où chaque fonction est une expression immuable.
-   - **Pourquoi c’est intéressant** : La rigueur imposée par l’absence d’effets de bord et le système de types avancé offre une perspective unique sur la gestion de données et de flux d’information.
+### 3. **Zig**
 
-   ```haskell
-   data Humain = Humain { nom :: String, age :: Int }
-   sePresenter (Humain nom age) = "Je m'appelle " ++ nom ++ " et j'ai " ++ show age ++ " ans."
-   ```
+- **Pourquoi c'est intéressant** : Zig est un langage moderne qui vise à remplacer C avec une syntaxe épurée, un contrôle total sur la gestion mémoire, et une compatibilité native avec le code C sans le côté complexe de C++.
+- **Utilité générale** : Zig est en pleine croissance dans les domaines du développement système et des logiciels embarqués. Il est utilisé pour des applications bas niveau, les jeux, et les outils de compilation, avec un contrôle absolu sur les ressources et sans runtime.
+- **Apprentissage et application** : Zig est assez spécialisé mais peut être une excellente introduction pour comprendre les concepts de bas niveau, sans les complexités syntaxiques de C++. Si tu cherches une alternative à C avec des options de mémoire avancées, Zig est très intéressant.
+
+**En résumé** : Zig est un choix idéal pour des développeurs système cherchant une alternative plus moderne et sécurisée à C, particulièrement adapté aux projets de bas niveau et à l’embarqué.
 
 ---
 
-### 3. **Racket**
-   - **Style** : Lispy (style de langage de la famille Lisp).
-   - **Particularité** : Racket est extrêmement flexible et conçu pour écrire des langages spécifiques au domaine (DSL).
-   - **Pourquoi c’est intéressant** : La structure du code est totalement différente grâce aux parenthèses et à la flexibilité des macros, ce qui donne une puissance inégalée pour la personnalisation syntaxique.
+### 4. **Haskell**
 
-   ```racket
-   (define humain%
-     (class object%
-       (init-field [nom "Alice"] [age 30])
-       (define/public (se-presenter)
-         (printf "Je m'appelle ~a et j'ai ~a ans.\n" nom age))
-       (super-new)))
-   ```
+- **Pourquoi c'est intéressant** : Haskell est un langage fonctionnel pur, avec un système de types avancé et des abstractions comme les monades et les foncteurs qui le rendent parfait pour apprendre et appliquer des concepts fonctionnels profonds.
+- **Utilité générale** : Bien que Haskell soit surtout populaire dans les milieux académiques et pour les analyses de données, il est également utilisé dans des projets nécessitant une **logique robuste** et une **vérification formelle**. Sa capacité à minimiser les effets de bord en fait un choix solide pour les systèmes critiques.
+- **Apprentissage et application** : Haskell est idéal pour maîtriser la programmation fonctionnelle pure et pour développer une rigueur dans la gestion de la logique et des structures de données. Cependant, il est moins polyvalent pour les projets courants en production.
+
+**En résumé** : Haskell est une excellente option pour s’immerger dans la programmation fonctionnelle et pour des applications nécessitant une rigueur mathématique et logique, mais il est moins pratique pour le développement généraliste ou les projets orientés production.
 
 ---
 
-### 4. **Nim**
-   - **Style** : Langage impératif avec un typage statique et une syntaxe similaire à Python.
-   - **Particularité** : Nim est conçu pour être performant comme C mais facile à lire comme Python.
-   - **Pourquoi c’est intéressant** : Nim compile vers C, C++, JavaScript, et offre des concepts novateurs comme les *métaprogrammes*, mais avec un équilibre rare entre flexibilité et performance.
+### **Conclusion**
 
-   ```nim
-   type Humain = object
-       nom: string
-       age: int
+- **Si tu cherches un langage polyvalent pour des projets en production, particulièrement dans le développement web ou les systèmes distribués** : **Go** est un bon choix, simple et efficace pour des solutions rapides.
 
-   proc sePresenter(h: Humain) =
-       echo "Je m'appelle ", h.nom, " et j'ai ", h.age, " ans."
-   ```
+- **Pour une compréhension et un contrôle mémoire avancés avec des débouchés en applications système et embarquées** : **Rust** est l’option la plus robuste, combinant sécurité et performance.
 
----
+- **Pour une approche de bas niveau moderne et une alternative à C dans le développement système** : **Zig** est un excellent compromis, spécialement pour les projets où le contrôle mémoire est crucial mais où tu souhaites éviter la complexité de C++.
 
-### 5. **Prolog**
-   - **Style** : Langage logique et déclaratif.
-   - **Particularité** : Construit pour résoudre des problèmes logiques, Prolog repose sur des faits, des règles, et des requêtes.
-   - **Pourquoi c’est intéressant** : Prolog est excellent pour les tâches de logique et d’IA, offrant une approche totalement différente de la programmation impérative ou fonctionnelle.
+- **Si tu veux explorer et maîtriser les concepts fonctionnels avancés et aborder la rigueur logique** : **Haskell** est la meilleure option pour l'apprentissage académique et la recherche en logique fonctionnelle. 
 
-   ```prolog
-   humain(nom("Alice"), age(30)).
-   se_presenter(X) :- humain(nom(X), age(Y)), format("Je m'appelle ~w et j'ai ~w ans.~n", [X, Y]).
-   ```
+En général, **Rust** est le choix le plus complet pour des projets ambitieux en production, particulièrement si tu veux des connaissances approfondies en systèmes et sécurité mémoire.
 
----
-
-### 6. **OCaml**
-   - **Style** : Langage fonctionnel impératif, statiquement typé.
-   - **Particularité** : Il combine les paradigmes fonctionnels et impératifs dans un style concis et expressif, avec un système de types puissant.
-   - **Pourquoi c’est intéressant** : OCaml offre des caractéristiques de programmation fonctionnelle mais reste très performant, avec une syntaxe concise et élégante.
-
-   ```ocaml
-   type humain = { nom : string; age : int }
-   let se_presenter h = Printf.printf "Je m'appelle %s et j'ai %d ans.\n" h.nom h.age
-   ```
-
----
-
-### 7. **Idris**
-   - **Style** : Langage fonctionnel à typage dépendant.
-   - **Particularité** : La vérification de types peut inclure des valeurs, permettant de créer des types et fonctions basés sur des conditions spécifiques.
-   - **Pourquoi c’est intéressant** : Idris est idéal pour des systèmes nécessitant une garantie de correction, où les types jouent un rôle central dans la logique de programmation.
-
-   ```idris
-   data Humain = Humain String Int
-   sePresenter : Humain -> String
-   sePresenter (Humain nom age) = "Je m'appelle " ++ nom ++ " et j'ai " ++ show age ++ " ans."
-   ```
-
----
-
-Ces langages offrent des perspectives originales et souvent transformantes, idéales pour un changement rafraîchissant et une nouvelle vision de la programmation. Chacun d’eux est bien adapté pour explorer des paradigmes différents de Python et de la POO traditionnelle.
-
-
-Pour explorer des syntaxes et concepts vraiment différents de Python, voici quelques langages rafraîchissants à étudier, chacun apportant une approche unique :
-
----
-
-### 1. **Elixir**
-
-   - **Paradigme** : Fonctionnel, concurrent.
-   - **Particularités** : Inspiré d’Erlang, Elixir est axé sur la concurrence avec un modèle de processus léger et une syntaxe lisible et concise. Il utilise aussi des “pipes” (`|>`) pour structurer le flux de données.
-   - **Utilisation** : Web, applications distribuées, et microservices (ex. framework Phoenix pour le Web).
-  
----
-
-### 2. **Racket**
-
-   - **Paradigme** : Fonctionnel, Lisp.
-   - **Particularités** : Orienté expressions, Racket utilise une syntaxe de type S-expressions (basée sur des parenthèses). Il est très flexible pour créer des DSL (Domain-Specific Languages) et favorise une approche de manipulation syntaxique.
-   - **Utilisation** : Enseignement de la programmation, développement de langages spécifiques.
-
----
-
-### 3. **Idris**
-
-   - **Paradigme** : Fonctionnel, typage dépendant.
-   - **Particularités** : Langage purement fonctionnel comme Haskell, avec un système de types dépendants puissant, ce qui permet d’écrire des programmes extrêmement sûrs et contrôlés au niveau du typage. Idris peut être utilisé pour la preuve de théorèmes et pour définir des types basés sur des données.
-   - **Utilisation** : Conception de logiciels critiques, recherche académique, preuve de programme.
-
----
-
-### 4. **Forth**
-
-   - **Paradigme** : Stack-based.
-   - **Particularités** : Un langage minimaliste orienté pile, Forth se distingue par une approche de programmation où chaque fonction manipule une pile. Cela force une façon de penser radicalement différente et donne un contrôle bas niveau du système.
-   - **Utilisation** : Systèmes embarqués, systèmes critiques.
-
----
-
-### 5. **Prolog**
-
-   - **Paradigme** : Logique, déclaratif.
-   - **Particularités** : Basé sur des règles et des relations logiques, Prolog utilise un moteur de résolution pour prouver les relations définies. Cela change complètement la manière de penser un programme, car il n’y a pas de flux d’instructions linéaire.
-   - **Utilisation** : Intelligence artificielle, systèmes experts, NLP.
-
----
-
-### 6. **Nim**
-
-   - **Paradigme** : Multi-paradigme (procédural, fonctionnel, orienté objet).
-   - **Particularités** : Nim produit du code performant en C, avec une syntaxe inspirée de Python mais avec une sémantique qui favorise des optimisations bas niveau. Il permet un contrôle avancé de la mémoire et est intéressant pour combiner lisibilité et performance.
-   - **Utilisation** : Systèmes embarqués, jeux, applications à haute performance.
-
----
-
-### 7. **Factor**
-
-   - **Paradigme** : Stack-based, orienté objets.
-   - **Particularités** : Factor est similaire à Forth mais ajoute des fonctionnalités orientées objets et des collections modernes. La syntaxe axée sur la pile crée une structure inhabituelle mais puissante pour des applications d’exploration.
-   - **Utilisation** : Programmation de systèmes, applications où un contrôle bas niveau est requis.
-
----
-
-Ces langages offrent des perspectives uniques, que ce soit par une approche de programmation logicielle (fonctionnelle, logique, pile) ou par une syntaxe et une sémantique différentes. Chacun pousse à explorer de nouvelles manières de structurer le code et de penser les problèmes.
 
 ## Conclusion
 
-it's horsecrap.
+it's horsecrap. But I choosed : Haskell si c'est trop dur => GO (je connais déjà un peu) => Rust => Zig
