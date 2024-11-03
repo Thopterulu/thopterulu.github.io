@@ -1,0 +1,8 @@
+{
+  "label": "J'ai lu",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Notes about what I read, mainly in French."
+  }
+}
