@@ -16,3 +16,6 @@
 
 ![alt text](image-1.png)
 
+- make yours and become the habit you want to have
+- take the time to decompose your day and judge the positive and negatives
+- link your habits in order to make them easier, healthier => ex : after my meal I launch the dishwasher and use clean the table. (3 actions back to back)
