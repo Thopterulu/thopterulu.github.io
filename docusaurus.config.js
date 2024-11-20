@@ -113,7 +113,7 @@ const config = {
               },
               {
                 label: 'Monkeytype',
-                href: 'https://monkeytype.com/profile/Thopter,'
+                href: 'https://monkeytype.com/profile/Thopter'
               }
             ],
           },
