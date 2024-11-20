@@ -111,6 +111,10 @@ const config = {
                 label: 'Codewars',
                 href: 'https://www.codewars.com/users/Thopter',
               },
+              {
+                label: 'Monkeytype',
+                href: 'https://monkeytype.com/profile/Thopter,'
+              }
             ],
           },
           {
