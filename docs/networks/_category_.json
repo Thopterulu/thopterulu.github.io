@@ -1,0 +1,8 @@
+{
+  "label": "Networks",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Some stuff about networks and how they are made"
+  }
+}
