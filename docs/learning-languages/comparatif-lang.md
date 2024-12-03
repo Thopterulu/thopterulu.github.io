@@ -229,6 +229,26 @@ humain.sePresenter();
 
 En général, **Rust** est le choix le plus complet pour des projets ambitieux en production, particulièrement si tu veux des connaissances approfondies en systèmes et sécurité mémoire.
 
+## Haskell
+
+- by [haskell-perf](https://github.com/haskell-perf/checklist)
+- by [iand675](https://github.com/iand675/haskell-checklist)
+- [package](https://github.com/tfausak/haskell-package-checklist)
+
+*Huge list of videos, talks , courses for Haskell programming language, that i want to remember.*
+- [awesome haskell must watch](https://github.com/hzlmn/haskell-must-watch)
+
+
+## LISP based
+
+- [awesome lisp languages](https://github.com/dundalek/awesome-lisp-languages)
+- [awesome commmon lisp](https://github.com/CodyReichert/awesome-cl)
+
+### Why should I care as a lisp programmer?
+
+If you already love s-expressions then lisp-flavored languages will make it nicer when you need to build on existing platforms. In case the target language does not support advanced features like macros and REPL-driven development, these can often be easily added by using the s-expressions layer.
+
+The second point is about helping to spread lisp and its powerful ideas more. The example of Clojure and its relative popularity shows that being hosted on existing mainstream language and leveraging ecosystems of existing libraries is a key to broader adoption. It also lowers the barrier for people to try lisp and learn about the ideas behind it. Traditionally to learn lisp one needs to learn and get used to very unfamiliar syntax while at the same time being exposed to a completely new environment and ecosystem. Taking the environment out of the equation can make the experience of trying out lisp more approachable.
 
 ## Conclusion
 
