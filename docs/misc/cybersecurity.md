@@ -396,7 +396,267 @@ signature, such as verifying repositories, not just ISOs.
 
 Optional: Complete the steps below if unfamiliar with GnuPG or if they haven't already been performed. This will fix eventual *GPG: WARNING: unsafe ownership warnings*.
 
+## steganography
 
+[The Ancient Practice of Steganography: What Is It, How Is It Used and Why Do Cybersecurity Pros Need to Understand It](https://www.comptia.org/blog/what-is-steganography)
+
+### snow, a steganography app
+
+https://cheatography.com/tynamoguy/cheat-sheets/snow-usage/pdf/
+
+
+# awesome pages
+
+https://github.com/carpedm20/awesome-hacking
+
+https://github.com/Hack-with-Github/Awesome-Hacking
+
+---
+
+# Damn Vulnerable Web Application Docker container
+
+[Docker Hub](https://hub.docker.com/r/vulnerables/web-dvwa/)
+
+# awesome vulnerable
+
+
+---
+
+VIRTUALISATION
+
+https://github.com/WinMin/awesome-vm-exploit
+
+---
+
+## Shodan
+
+- [shodan](https://www.shodan.io/dashboard)
+- [documentation](https://help.shodan.io/the-basics/what-is-shodan)
+
+### cheat sheet
+
+https://cheatography.com/sir-slammington/cheat-sheets/shodan/pdf/
+
+---
+
+Privilege escalation
+
+https://github.com/m0nad/awesome-privilege-escalation
+
+---
+
+PASSIVE RECON
+
+# The harvester
+
+TheHarvester is used for gathering a range of information such as emails, sub-domains, hosts, from different public sources. This is a passive reconnaissance tool.
+
+https://cheatography.com/classassignment124/cheat-sheets/theharvester-cheat-sheet/pdf/
+
+---
+
+# Nmap
+
+## Host dicovery
+
+liste des principales commandes pour découvrir des hôtes sur un réseau.
+
+```
+$ nmap  -sL # (List Scan)
+
+$ nmap  -sn # (No port scan)
+
+$ nmap  -Pn # (No ping)
+
+$ nmap  -PS <port list> # (TCP SYN Ping)
+
+$ nmap -PA <port list> # (TCP ACK Ping)
+
+$ nmap  -PU <port list> # (UDP Ping)
+
+$ nmap  -PY <port list> # (SCTP INIT Ping)
+
+$ nmap  -PE; -PP; -PM # (ICMP Ping Types)
+
+$ nmap  -PO <protocol list> # (IP Protocol Ping)
+
+$ nmap  --disable-arp-ping # (No ARP or ND Ping)
+
+$ nmap  --traceroute # (Trace path to host)
+
+$ nmap  -n # (No DNS resolution)
+
+$ nmap  -R # (DNS resolution for all targets)
+
+$ nmap  --resolve-all # (Scan each resolved address)
+
+$ nmap  --system-dns # (Use system DNS resolver)
+
+$ nmap  --dns-servers <server1>[,<server2>[,...]] # (Servers to use for reverse DNS queries)
+
+```
+
+## [Nmap Port Scanning Basics](https://www.parrotsec.org/docs/nmap.html#nmap-port-scanning-basics)
+
+While Nmap has grown in functionality over the years, it began as an
+efficient port scanner, and that remains its core function. The simple
+command nmap  scans 1,000 TCP ports on the host . While
+many port scanners have traditionally lumped all ports into the open or
+closed states, Nmap is much more granular. It divides ports into six
+states: open, closed, filtered, unfiltered, open|filtered, or
+closed|filtered.
+
+These states are not intrinsic properties of the port itself, but
+describe how Nmap sees them. For example, an Nmap scan from the same
+network as the target may show port 135/tcp as open, while a scan at the
+same time with the same options from across the Internet might show
+that port as filtered
+
+### [Six port states recognized by Nmap](https://www.parrotsec.org/docs/nmap.html#six-port-states-recognized-by-nmap)
+
+- open
+
+An application is actively accepting TCP connections, UDP datagrams
+or SCTP associations on this port. Finding these is often the primary
+goal of port scanning. Security-minded people know that each open port
+is an avenue for attack. Attackers and pen-testers want to exploit the
+open ports, while administrators try to close or protect them with
+firewalls without thwarting legitimate users. Open ports are also
+interesting for non-security scans because they show services available
+for use on the network.
+
+- closed
+
+A closed port is accessible (it receives and responds to Nmap probe
+packets), but there is no application listening on it. They can be
+helpful in showing that a host is up on an IP address (host discovery,
+or ping scanning), and as part of OS detection. Because closed ports are
+reachable, it may be worth scanning later in case some open up.
+Administrators may want to consider blocking such ports with a firewall.
+Then they would appear in the filtered state, discussed next.
+
+- filtered
+
+Nmap cannot determine whether the port is open because packet
+filtering prevents its probes from reaching the port. The filtering
+could be from a dedicated firewall device, router rules, or host-based
+firewall software. These ports frustrate attackers because they provide
+so little information. Sometimes they respond with ICMP error messages
+such as type 3 code 13 (destination unreachable: communication
+administratively prohibited), but filters that simply drop probes
+without responding are far more common. This forces Nmap to retry
+several times just in case the probe was dropped due to network
+congestion rather than filtering. This slows down the scan dramatically.
+
+- unfiltered
+
+The unfiltered state means that a port is accessible, but Nmap is
+unable to determine whether it is open or closed. Only the ACK scan,
+which is used to map firewall rulesets, classifies ports into this
+state. Scanning unfiltered ports with other scan types such as Window
+scan, SYN scan, or FIN scan, may help resolve whether the port is open
+
+- open|filtered
+
+Nmap places ports in this state when it is unable to determine
+whether a port is open or filtered. This occurs for scan types in which
+open ports give no response. The lack of response could also mean that a
+packet filter dropped the probe or any response it elicited. So Nmap
+does not know for sure whether the port is open or being filtered. The
+UDP, IP protocol, FIN, NULL, and Xmas scans classify ports this way.
+
+- closed|filtered
+
+This state is used when Nmap is unable to determine whether a port is
+closed or filtered. It is only used for the IP ID idle scan.
+
+```
+Not shown: 995 filtered ports
+PORT     STATE  SERVICE
+80/tcp   open   http
+113/tcp  closed ident
+443/tcp  open   https
+8080/tcp open   http-proxy
+8443/tcp open   https-alt
+
+Nmap done: 1 IP address (1 host up) scanned in 18.57 seconds
+# Notice the STATE
+
+```
+
+---
+
+MIMIKATZ
+
+[Mimikatz](https://github.com/gentilkiwi/mimikatz) est une application en accès libre qui permet aux utilisateurs de voir et enregistrer des informations d’authentification comme [les tickets Kerberos](https://blog.varonis.fr/explication-de-lauthentification-kerberos/). Étant donné que Benjamin Delpy dirige toujours les développements de Mimikatz, l’ensemble d’outils fonctionne avec la version actuelle de Windows et intègre les attaques les plus récentes.
+
+Les hackers utilisent couramment Mimikatz pour voler des données d’identification et augmenter les droits : dans la plupart des cas, un logiciel de protection des terminaux et des systèmes antivirus le détecteront et le supprimeront. À l’inverse, les [testeurs d’intrusion](https://www.varonis.com/blog/master-fileless-malware-penetration-testing/?__hstc=159083941.0f468766a81ea73566656613f8381733.1634136407157.1634136407157.1634136407157.1&__hssc=159083941.87.1634136407157&__hsfp=1561754925&hsLang=fr) utilisent Mimikatz pour détecter et exploiter les vulnérabilités de vos réseaux afin que vous puissiez leur trouver une parade.
+
+# [tutoriel](https://www.varonis.com/fr/blog/mimikatz-kezako)
+
+---
+
+LOCKPICKING
+
+https://github.com/fabacab/awesome-lockpicking
+
+---
+
+KERNEL EXPLOITS
+
+# Linux
+
+https://github.com/SecWiki/linux-kernel-exploits
+
+## rootkit
+
+https://github.com/milabs/awesome-linux-rootkits
+
+---
+
+HACKER SEARCH ENGINES
+
+https://github.com/edoardottt/awesome-hacker-search-engines
+
+---
+
+# Get hothotspots wifis
+
+[Https://wifimap.io](https://wifimap.io/)
+
+---
+
+## GAME HACKING
+
+https://github.com/gmh5225/awesome-game-security
+
+---
+
+## FLIPPER ZERO
+
+### liens utiles Flipper Zero
+
+[Documentation officielle](https://docs.flipperzero.one/)
+
+*awesome github*
+https://github.com/djsime1/awesome-flipperzero
+
+---
+
+ESP8266_ESP32
+
+https://github.com/agucova/awesome-esp
+
+---
+
+## BLACK HAT METHODOLOGIES 
+
+### Lockheed Martin Cyber Kill Chain (CKC).
+
+The CKC consists of seven steps that a black hat must accomplish for their attack to be effective. They include reconnaissance, weaponization, delivery, exploitation, installation, command and control, and  attack on objectives.
+
+
+---
 
 
 ## References
@@ -407,5 +667,12 @@ Optional: Complete the steps below if unfamiliar with GnuPG or if they haven't a
 - [Blog de Gentil Kiwi](https://blog.gentilkiwi.com/)
 - [DevSecOps](https://github.com/sottlmarek/DevSecOps)
 - [awesome-devsecops](https://github.com/TaptuIT/awesome-devsecops)
-
+- [awesome-malware-analysis](https://github.com/rshipp/awesome-malware-analysis)
+- [how to become a hacker](http://www.catb.org/~esr/faqs/hacker-howto.html)
+- [awesome-browser-exploit](https://github.com/Escapingbug/awesome-browser-exploit)
+- [awesome vulnerable](https://github.com/kaiiyer/awesome-vulnerable)
+- [awesome-shodan-queries](https://github.com/jakejarvis/awesome-shodan-queries)
+- [Aircrack-ng](https://www.aircrack-ng.org/)
+- [awesome-pentest-cheat-sheets](https://github.com/coreb1t/awesome-pentest-cheat-sheets)
+- [enaqx/awesome-pentest](https://github.com/blaCCkHatHacEEkr/PENTESTING-BIBLEhttps://github.com/enaqx/awesome-pentest)
 
