@@ -659,6 +659,197 @@ The CKC consists of seven steps that a black hat must accomplish for their atta
 ---
 
 
+## Methodo and quick notes
+
+### Analyze emails for cybersec
+
+#### Analyze headers from emails
+
+it’s separates all the data into readable fields.
+
+To see the content of an email and analyze it you need to clic on “show original”.
+
+[Email Header Analyzer, RFC822 Parser - MxToolbox](https://mxtoolbox.com/EmailHeaders.aspx)
+
+Il y a plusieurs tests pour voir si le header est DMARC compliant:
+
+- Le framework “Sender Policy Framework” (SPF)
+- Le “Domain Keys Identified Mail” (DKIM) records
+
+Mis ensemble ces deux méthodes forment le Domain Message Authentification Reporting (DMARC). Les toutes applications d’emails utilisent le DMARC pour vérifier si le mail à la permission d’être envoyé par ce domain et cette addresse IP.
+
+Bien que ce sont de bons indicateurs, ils ne suffisent pas à dicerner un vrai mail d’un mail de phising. Déjà les systèmes qui utilisent le DMARC doivent avoir leurs entrées à jours et le système de signature fonctionnel ce qui est assez souvent pas le cas. Il est aussi possible pour des hackers d’imiter une addresse IP afin de passer au travers des tests DMARC. DMARC ne suffit donc pas.
+
+### important hearders informations / categories
+
+Le header “return-Path” permet de connaître l’addresse de retour et permet d’identifier clairement le sender.
+
+Les headers commençant par un X désignent des actions qui sont réalisées à la réception du mail.
+
+exemple : X-Apple-Action : MOVE_TO_FOLDER/INBOX
+
+Message-ID = Unique Id given to the email. easier to search by ID.
+
+x-originating-ip = Original IP address that sent the email. Helps determine if the sender is malicious, and helps find other merssages by that sender.
+
+X-Mailer = Specifies the application used to send the email.
+
+Recieved-SPF = Provides results of SPF check.
+
+X-MS-Has-Attach = Indicates if the email has attachement or not.
+
+---
+
+### Analyze files
+
+### Virus total
+
+Upload suspected file to virus total to scan it.
+
+### Joesandbox
+
+Describe the full process of the infection by testing it.
+
+Decompose the process ++ intresting
+
+---
+
+## Analyze URLs
+
+### Analyse an url with virustotal
+
+passe le lien à 93 antivirus et retourne la note. Si ne serait-ce qu’un seul des anti virus s’active alors on sait que le lien est dangereux
+
+[VirusTotal](https://www.virustotal.com/gui/home/url)
+
+ne fonctionne pas avec les liens de redirection
+
+### Test links in a sandbox with joesandbox
+
+[Automated Malware Analysis - Joe Sandbox Cloud Basic](https://www.joesandbox.com/#windows)
+
+needs an account
+
+---
+
+## **Identity and Access Management**
+
+https://github.com/kdeldycke/awesome-iam
+
+---
+
+---
+
+---
+
+# **Access control knowledge**
+
+# Authentification
+
+## Types of authentification
+
+### Type 1 : Something you know
+
+The piece of information you memorized, could be :
+
+- a password
+- A cognitive password, like the security question
+
+### Drawbacks of Type 1
+
+ez to break because it’s not necessarily unique or complex.
+
+How many passwords are :
+
+- easy to guess ?
+- used in more than one place ?
+- under 12 char long?
+- Complex ?
+
+Those are weak against brute force or dictionnary attacks, social engineering, etc…
+
+So it’s not the most secure
+
+### Benefits of Type 1
+
+- easiest version to setup and maintain
+
+## Type 2 : Something You Have
+
+A digital artefact or a physical object that you must present in order to authentificate
+
+could be : a key generator, digital certificate, etc…
+
+The safest Type2 is the smart card : the card contains a chip with an encryption key, it’s nearly impossible to guess the key.
+
+### Benefits of Type 2
+
+- stronger then Type 1 : attacker need to steal the objet/artifact in order to bypass auth.
+
+### Drawbacks of Type 2
+
+- more complex and expensive to implement (ex : key reader have to be installed)
+- If the user lose the artefact/object he needs to have others ways to retrieve auth
+
+## Type 3 : Something you Are
+
+Type 1 and 2 have the drawback to be only tied to a single person, making it possible for someone else to use their credentials.
+
+Type 3 use biometric signature as the auth method.
+
+Biometric : some physical or behavioral attribute of a person (fingerprint, retina scan, facial recognition, voice, DNA, but might also be a behavior : walking, their signature…) In theory theses attributes are universally unique.
+
+### Type 3 common list
+
+- fingerprint scanner
+- Hand Scanner (patterns on finger and palm)
+- Iris scanner (Shape of eyeball)
+- Retina scanner (Pattern of blood vessels at back of eyeball)
+- Face scanner (Pattern and shape of face)
+
+People must provide their biometric signatures. The sensitivity of the scanner is essential in the auth, it might be too permissive or not. Theses are called the **FAR** : **False acceptance Rate** and **FRR : False rejection rate. The sweet stop between both is called the CER : Crossover Error Rate,** thats what constructor are trying to reach when making Type 3 auth systems.
+
+> Type 3 is the strongest form of auth, it’s very hard to impersonnate biometric signatures
+> 
+
+Although, people can change their signature (eg : burning fingers, shaving a beard) theses can confuse scanners.
+
+So it’s important to have a backup auth system in case the biometric fail
+
+## Type 4 & 5 : Something you do and Somewhere you are
+
+There are typically complementary to the others form of auth rather than acting as stand alone
+
+### Type 4
+
+Anyone can do the same action as you, so it’s useless when used alone.
+
+- CAPTCHA
+
+### Type 5
+
+Is used when someone from an other location is trying to access your account, an alert is activated.
+
+# Multifactor auth is the way
+
+# Authorization
+
+Once an user is authenticated they must be authorized to do certain actions.
+
+Authorization is based on who you are in the organisation.
+
+## Access control schemes
+
+### MAC : Mandatory Access Control
+
+### Rule-Based control
+
+### Role-Based control
+
+### Attribute-Based Access Control (ABAC)
+
+### Discretionary Access Control (DAC)
+
 ## References
 
 - [Newbie Contest - Challenges informatiques francophones](https://www.newbiecontest.org/)
